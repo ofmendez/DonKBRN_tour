@@ -213,6 +213,22 @@ gap:30px;
 .MoreDates{
   width: 70%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top:10px;
+}
+
+.TicketsOnSale{
+  width: 80% !important;
+  z-index:10;
+  display:block;
+}
+
+.MoreDatesSoon
+{
+  margin-top:-25px;
+  display: block;
+  z-index: 9;
 }
 
 
