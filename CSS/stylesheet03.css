@@ -261,6 +261,12 @@ gap:30px;
   .BotonCompra{
     width:30%;
   }
+
+  .MoreDatesSoon
+{
+  margin-top:-5px;
+}
+
 }
 
 @media (min-width: 920px) {
