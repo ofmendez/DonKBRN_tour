@@ -1,0 +1,260 @@
+  /* Fuentes */
+  @font-face {
+      font-family: AkzidenzGrotesk;
+      src: url(../fonts/AkzidenzGrotesk.woff);
+ }
+
+ @font-face {
+  font-family: P22FreelyRegular;
+  src: url(../fonts/P22FreelyRegular.woff);
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+
+ body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2; /* Fondo de la página */
+  position: relative;
+  font-family: sans-serif;
+}
+
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.frame img {
+  position: absolute;
+  z-index: 10;
+}
+
+.frame .top { 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto;
+  height: 2vw;
+ }
+
+.frame .bottom { 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  height: 2vw;
+}
+
+.frame .left { 
+  top: 0; 
+  left: 0; 
+  height: 100%; 
+  width: auto;
+  width: 2vw;
+ }
+
+.frame .right { 
+  top: 0; 
+  right: 0; 
+  height: 100%; 
+  width: auto; 
+  width: 3vw;
+}
+
+@media (max-width: 768px) {
+  .frame .top { 
+    height: 4vw;
+   }
+  
+  .frame .bottom { 
+    height: 4vw;
+  }
+  
+  .frame .left { 
+    width: 4vw;
+   }
+  
+  .frame .right {  
+    width: 4vw;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+  background-image: url("../images/DonKBRN_Fondo.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 100dvh;
+  justify-content: center;
+}
+
+.maxwidthcolumn{
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:3vw 5vw;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row img {
+  max-width: 100%;
+  width:100%;
+  height: auto;
+}
+
+.rowlogos{
+  flex-direction: row;
+justify-content: space-between;
+gap:30px;
+}
+
+.columnlogos{
+  max-width:25vw;
+}
+
+.rowdates{
+  margin-top:-205px;
+  justify-content: space-around;
+  column-gap: 20px;
+  flex-direction: column;
+}
+
+.RegionesGira{
+  display: flex;
+  flex-direction: row;
+  column-gap: 3%;
+  max-width:400px;
+  padding: 0 5%;
+}
+
+.BotonRegionGira{
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.BotonRegionGira:hover {
+  transform: translateY(-4px);
+}
+
+.seccion {
+  opacity: 0;
+  display:none;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  width:100%;
+}
+
+.seccion.active {
+  opacity: 1;
+  display: block;
+}
+
+
+.FilaFechaConcierto{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch;
+  margin: 5px 0;
+}
+
+.FondoCiudad {
+  background-image: url("../images/DonKBRN_FondoFecha.webp");
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  background-position: center center;
+  background-size: 100% 100%;
+  padding:1px 30px;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.FechaConcierto{
+  color: #4b8cb2;
+  font-family: AkzidenzGrotesk;
+  font-size: 3.3vw;
+  width:20%;
+}
+
+.CiudadConcierto{
+  font-family: P22FreelyRegular;
+  text-transform: uppercase;
+  font-size: 3.3vw;
+  color: #2d2f30;
+  width:80%;
+}
+
+.BotonCompra{
+  width:15%;
+  transition: transform 0.2s ease;
+}
+
+.BotonCompra:hover {
+  transform: translateX(4px);
+}
+
+.MoreDates{
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+  .rowdates {
+    margin-top:-55px;
+    padding:3%;
+  }
+
+  .FilaFechaConcierto{
+    align-items: center;
+  }
+
+  .FondoCiudad {
+    width: 70%;
+    padding:15px 10px;
+  }
+
+  .FechaConcierto{
+    font-size: 5vw;
+    width:27%;
+  }
+
+  .CiudadConcierto{
+    font-size: 4.5vw;
+    width:73%;
+    line-height: 1.1em;
+  }
+
+  .BotonCompra{
+    width:30%;
+  }
+}
+
+@media (min-width: 920px) {
+
+  .FechaConcierto{
+    font-size: 30px;
+  }
+
+  .CiudadConcierto{
+    font-size: 30px;
+  }
+}
