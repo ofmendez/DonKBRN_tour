@@ -851,7 +851,7 @@
                     <div class="FechaConcierto">AUG 27</div>
                     <div class="CiudadConcierto"> Charlotte, NC</div>
                  </div>
-                 <div class="BotonCompra"><a href="https://www.ticketmaster.com/event/2D006296FAA87CFB" target="_blank"><img src="images/DonKBRN_Tickets_Btn.webp"/></a>
+                 <div class="BotonCompra"><a href="https://www.ticketmaster.com/event/2D006296FAA87CFB" target="_blank" data-nombre="Charlotte"><img src="images/DonKBRN_Tickets_Btn.webp"/></a>
                  </div>
               </div>
               <!-- Fin Fecha Concierto -->
@@ -861,7 +861,7 @@
                     <div class="FechaConcierto">AUG 28</div>
                     <div class="CiudadConcierto"> Washington, DC</div>
                  </div>
-                 <div class="BotonCompra"><a href="https://www.ticketmaster.com/event/15006296F779482C" target="_blank"><img src="images/DonKBRN_Tickets_Btn.webp"/></a>
+                 <div class="BotonCompra"><a href="https://www.ticketmaster.com/event/15006296F779482C" target="_blank" data-nombre="Washington"><img src="images/DonKBRN_Tickets_Btn.webp"/></a>
                  </div>
               </div>
               <!-- Fin Fecha Concierto -->
@@ -1187,6 +1187,20 @@
        seccion.classList.add('active');
      }
   </script>
+
+<script>
+  document.querySelectorAll("a.imagen-enlace").forEach(link => {
+    link.addEventListener("click", function() {
+      const nombre = this.getAttribute("data-nombre");
+      gtag('event', 'click_imagen', {
+        'event_category': 'interaccion',
+        'event_label': nombre
+      });
+    });
+  });
+</script>
+
+
 </body>
 
 
