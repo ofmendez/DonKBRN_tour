@@ -1,19 +1,14 @@
  body {
       font-family: sans-serif;
       text-align: center;
-      padding: 50px;
       background-color: black;
     }
     img {
       max-width: 550px;
       width:100%;
       height: auto;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
+      display:block;
+      margin:0 auto;
     }
 
     .BotonPreRegistro{
@@ -26,8 +21,8 @@
     @media (max-width: 1024px) {
 
   img {
-      max-width: 98%;
-      width:98%;
+      max-width: 100%;
+      width:100%;
     }
 
      .BotonPreRegistro{
