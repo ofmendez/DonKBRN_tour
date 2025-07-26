@@ -206,6 +206,11 @@ gap:30px;
   transition: transform 0.2s ease;
 }
 
+.BotonSoldOut{
+  width:15%;
+  filter: grayscale(1);
+}
+
 .BotonCompra:hover {
   transform: translateX(4px);
 }
